@@ -35,12 +35,13 @@ function BlogPostTemplate({
           <dd>
             <ul className="flex justify-center lg:block space-x-8 sm:space-x-12 lg:space-x-0 lg:space-y-8">
               <li className="flex space-x-2">
-                {/*<Img
+                {page.author.cloudinaryAsset && (
+                  <img src={page.author.cloudinaryAsset.secure_url} />
+                ) || (<Img
                   fluid={authorImage.localFile.childImageSharp.fluid}
                   className="w-10 h-10 rounded-full"
                   fadeIn={false}
-                />*/}
-                <img src={page.author.cloudinaryAsset.secure_url} />
+                />)}
                 <dl className="flex-1 text-sm font-medium leading-5">
                   <dt className="sr-only">Name</dt>
                   <dd className="text-gray-900">{page.author.name}</dd>
