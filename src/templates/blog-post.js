@@ -35,11 +35,12 @@ function BlogPostTemplate({
           <dd>
             <ul className="flex justify-center lg:block space-x-8 sm:space-x-12 lg:space-x-0 lg:space-y-8">
               <li className="flex space-x-2">
-                <Img
+                {/*<Img
                   fluid={authorImage.localFile.childImageSharp.fluid}
                   className="w-10 h-10 rounded-full"
                   fadeIn={false}
-                />
+                />*/}
+                <img src={page.author.cloudinaryAsset.secure_url} />
                 <dl className="flex-1 text-sm font-medium leading-5">
                   <dt className="sr-only">Name</dt>
                   <dd className="text-gray-900">{page.author.name}</dd>
@@ -55,12 +56,15 @@ function BlogPostTemplate({
           </dd>
         </dl>
         <div className="divide-y divide-gray-200 lg:pb-0 lg:col-span-3 lg:row-span-2">
-          {coverImage && (
+          {/*coverImage && (
             <Img
               fluid={coverImage.localFile.childImageSharp.fluid}
               className="mb-8 rounded"
               fadeIn={false}
             />
+          )*/}
+          {page.cloudinaryCoverImage && (
+            <img src={page.cloudinaryCoverImage.secure_url} />
           )}
           <div className="prose max-w-none pt-10 pb-8">
             <MDXRenderer>{page.content.markdownNode.childMdx.body}</MDXRenderer>

@@ -5,6 +5,7 @@ fragment Author on Author {
   updatedAt
   publishedAt
   name
+  cloudinaryAsset
   picture {
     ... on Asset {
       remoteTypeName: __typename

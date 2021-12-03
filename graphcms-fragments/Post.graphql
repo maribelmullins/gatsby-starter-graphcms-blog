@@ -8,6 +8,7 @@ fragment Post on Post {
   slug
   date
   excerpt
+  cloudinaryCoverImage
   coverImage {
     ... on Asset {
       remoteTypeName: __typename

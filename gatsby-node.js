@@ -39,7 +39,9 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
                 id
                 name
                 title
+                cloudinaryAsset
               }
+              cloudinaryCoverImage
               content {
                 markdownNode {
                   childMdx {
