@@ -36,7 +36,7 @@ function BlogPostTemplate({
             <ul className="flex justify-center lg:block space-x-8 sm:space-x-12 lg:space-x-0 lg:space-y-8">
               <li className="flex space-x-2">
                 {page.author.cloudinaryAsset ? (
-                  <img src={page.author.cloudinaryAsset.secure_url} />
+                  <img src={page.author.cloudinaryAsset.secure_url} className="w-10 h-10 rounded-full" />
                 ) : (<Img
                   fluid={authorImage.localFile.childImageSharp.fluid}
                   className="w-10 h-10 rounded-full"
